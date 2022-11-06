@@ -1,83 +1,136 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAweome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- Page Title -->
+    <title>Javascript Code Quiz</title>
 </head>
+
 <body>
-    <!-- start Quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
-
-    <!-- Info Box -->
-    <div class="info_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
-        <div class="info-list">
-            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, it can't be undone.</div>
-            <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+    <!-- Container for Header -->
+    <header class="container-fluid mb-5">
+        <!-- div for scores link and time -->
+        <div class="row">
+            <!-- View highscores -->
+            <div class="col-6">
+                <!-- <a href="">View Highscores</a> -->
+                <button id="view-scores" type="button" class="btn btn-secondary d-inline-block mt-1">View High Scores</button>
+            </div>
+            <!-- Timer -->
+            <div class="col-6">
+                <p class="d-flex justify-content-end time">Time:75s</p>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Continue</button>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Container for Intro, Questions, Answers -->
+        <div class="container">
+            <!-- Section for H1 and Intro // Hide upon Start-->
+            <section id="intro">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <h1 class="d-flex justify-content-center text-center">Welcome to the Javascript Coding Quiz Challenge!</h1>
+                        <p class="d-flex justify-content-center text-center">Try to answer the following javascript code questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                        <button id="start" type="button" class="btn btn-success mx-auto d-block">Start Quiz</button></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section for Question and Answers // Show upon Start-->
+            <section id="questions">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <h2 id="question">I'm a question</h2>
+                        <ul class="px-0 py-0 nobullets">
+                            <li class="mb-3"><button id="answer1" value="0" type="button"
+                                    class="btn btn-success ansBtn">Answer1</button></li>
+                            <li class="mb-3"><button id="answer2" value="1" type="button"
+                                    class="btn btn-success ansBtn">Answer2</button></li>
+                            <li class="mb-3"><button id="answer3" value="2" type="button"
+                                    class="btn btn-success ansBtn">Answer3</button></li>
+                            <li class="mb-3"><button id="answer4" value="3" type="button"
+                                    class="btn btn-success ansBtn">Answer4</button></li>
+                        </ul>
+                        <div id="yaynay" class="font-weight-light font-italic">
+                            <hr>
+                            <!-- Correct or Wrong will be added via JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section for Final Score and Name -->
+            <section id="final">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <h2>All done!</h2>
+                        <p>Your final score is: <span id="score" class="pl-1">0</span></p>
+                        <!-- <p class="score">Your final score is: </p> -->
+                        <p>Enter initials: <span class="ml-1"><input placeholder="initials" id="initials" /></span>
+                            <button id="submit-score" class="btn btn-success mx-1 my-1 d-inline-block">Submit</button>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section for High Scores -->
+            <section id="highscores">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                            <h2>High Scores</h2>
+                            <!-- High scores should be added as a sorted desc list -->
+                            <ol id="score-list">
+                                <!-- <li></li> -->
+                            </ol>
+                            <button id="goback" class="btn btn-success d-inline-block mx-1 my-1">Go back</button>
+                            <button id="clearscores" class="btn btn-success mx-1 my-1 d-inline-block">Clear scores</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Container Ends -->
         </div>
-    </div>
+    </main>
 
-    <!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="title">Awesome Quiz Application</div>
-            <div class="timer">
-                <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">15</div>
+    <!-- Footer -->
+    <!-- Photo credit -->
+    <div class="footer-margin">
+        <footer class="container-fluid p-0">
+            <div class="row p-2 text-center">
+                <div class="col-12">
+                    <p class="mb-0"><span>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/outline?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
+                </div>
             </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
-            </div>
-            <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
-            </div>
-        </section>
-
-        <!-- footer of Quiz Box -->
-        <footer>
-            <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
-            </div>
-            <button class="next_btn">Next Que</button>
         </footer>
     </div>
 
-    <!-- Result Box -->
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">You've completed the Quiz!</div>
-        <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
-        </div>
-        <div class="buttons">
-            <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
-        </div>
-    </div>
-
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="js/questions.js"></script>
-
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="js/script.js"></script>
-
+    <!-- Javascript  -->
+    <script src="./assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
-</html>
+
 </html>
