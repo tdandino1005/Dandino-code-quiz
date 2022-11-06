@@ -222,7 +222,7 @@ submitScrBtn.addEventListener("click", addScore);
 goBackBtn.addEventListener("click", function () {
     highscoresEl.style.display = "none";
     introEl.style.display = "block";
-    secondsLeft = 75;
+    secondsLeft = 90;
     timeEl.textContent = `Time:${secondsLeft}s`;
 });
 
