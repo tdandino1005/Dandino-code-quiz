@@ -1,7 +1,7 @@
 // variables for page elements
 // time and score
 let timeEl = document.querySelector("p.time");
-let secondsLeft = 75;
+let secondsLeft = 60;
 let scoreEl = document.querySelector("#score");
 
 // sections
