@@ -1,5 +1,9 @@
 # Dandino-code-quiz
-![Screenshot](screenshot.png)
+![image](https://user-images.githubusercontent.com/114967217/200368820-bbcc1c78-b831-4f5e-bd69-9357bbd91026.png)
+
+![image](https://user-images.githubusercontent.com/114967217/200368402-bffb7545-67b2-429f-991a-44771f69028e.png)
+
+![image](https://user-images.githubusercontent.com/114967217/200369013-ce52e143-ca20-4027-aad9-acdd1dec4cf5.png)
 
 
 ## Project Outline
