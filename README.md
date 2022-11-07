@@ -1,10 +1,12 @@
 # Dandino-code-quiz
-https://github.com/tdandino1005/Dandino-code-quiz/issues/1
+
 
 
 ## Project Outline
 
-An interactive, timed JavaScript quiz that stores a high score leaderboard in local storage.
+This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data. 
+
+This is an interactive, timed JavaScript quiz that stores a high score leaderboard in local storage.
 Developed in accordance with the following acceptance criteria: 
 
 ```
@@ -18,7 +20,7 @@ THEN time is subtracted from the clock
 WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
-THEN I can save my initials and my score
+THEN I can save my initials and score
 ```
 
 ## Design Notes
