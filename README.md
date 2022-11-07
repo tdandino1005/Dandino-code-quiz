@@ -1,5 +1,6 @@
 # Dandino-code-quiz
-
+https://github.com/tdandino1005/Dandino-code-quiz/issues/1
+![image](https://user-images.githubusercontent.com/114967217/200368402-bffb7545-67b2-429f-991a-44771f69028e.png)
 
 
 ## Project Outline
