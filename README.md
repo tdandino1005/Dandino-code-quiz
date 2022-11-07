@@ -1,5 +1,5 @@
 # Dandino-code-quiz
-![Screenshot](screenshot.png)
+https://github.com/tdandino1005/Dandino-code-quiz/issues/1
 
 
 ## Project Outline
