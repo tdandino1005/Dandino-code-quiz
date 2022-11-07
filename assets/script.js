@@ -62,9 +62,9 @@ const questions = [ // array of objects
     },
     {
        
-        question: "The condition in an if / else statement is enclosed within ____.",
-        answers: ["1. quotes", "2. curly brackets", "3. parentheses", "4. square brackets"],
-        correctAnswer: "1"
+        question: "Which of the following is a statement that can be used to terminate a loop, switch or label statement?",
+        answers: ["1. break", "2. stop", "3. halt", "4. exit"],
+        correctAnswer: "0"
     },
     {
         
@@ -74,14 +74,14 @@ const questions = [ // array of objects
     },
     {
         
-        question: "String values must be enclosed within ____ when being assigned to variables.",
-        answers: ["1. commmas", "2. curly brackets", "3. quotes", "4. parentheses"],
-        correctAnswer: "2"
+        question: "How do you create a function in JavaScript",
+        answers: ["a. function = myFunction()", "b. function myFunction()", "c. function:myFunction()", "d. createMyFunction()"],
+        correctAnswer: "1"
     },
     {
         
         question: "Inside which HTML element do we put the JavaScript?",
-        choices: ["a. <js>", "b. <javascript>", "c. <scripting>", "d. <script>"],
+        answers: ["a. <js>", "b. <javascript>", "c. <scripting>", "d. <script>"],
         correctAnswer: "3"
     }
 ];
