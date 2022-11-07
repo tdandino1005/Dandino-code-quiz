@@ -52,7 +52,6 @@ const clearScrBtn = document.querySelector("#clearscores");
 // view-scores
 const viewScrBtn = document.querySelector("#view-scores");
 
-// Object for question, answer, true/false
 const questions = [ // array of objects
     {
         
