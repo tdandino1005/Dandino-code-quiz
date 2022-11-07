@@ -43,7 +43,7 @@ const clearScrBtn = document.querySelector("#clearscores");
 
 const viewScrBtn = document.querySelector("#view-scores");
 
-const questions = [ // array of objects
+const questions = [
     {
         
         question: "Commonly used data types do NOT include:",
